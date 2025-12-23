@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+ .custom-scrollbar::-webkit-scrollbar {
+          width: 5px; /* Thin width like the image */
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+          background: transparent; /* Invisible track */
+          margin: 10px 0; /* Keeps scrollbar away from top/bottom edges */
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+          background: #DFF3FF; /* Matches your border color */
+          border-radius: 20px; /* Fully rounded pill shape */
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+          background: #F8F8F8; /* Darker on hover */
+        }
+        /* For Firefox */
+        .custom-scrollbar {
+          scrollbar-width: thin;
+          scrollbar-color: #DFF3FF transparent;
+        }
